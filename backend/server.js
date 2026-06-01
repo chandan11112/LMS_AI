@@ -109,7 +109,7 @@ app.get("/", (req, res) => {
     status: "OK",
     message: "LearnKro API is running",
     timestamp: new Date(),
-    env: process.env.NODE_ENV,
+    env: process.env.NODE_ENV||"development",
   });
 });
 
