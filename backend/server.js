@@ -104,7 +104,7 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api/progress", progressRoutes);
 
 // Health check
-app.get("/api/health", (req, res) => {
+app.get("/", (req, res) => {
   res.json({
     status: "OK",
     message: "LearnKro API is running",
@@ -151,4 +151,6 @@ app.use((err, req, res, next) => {
   // console.log(`🚀 LearnKro server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
 // });
 
+
 export default app;
+
