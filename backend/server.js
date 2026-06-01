@@ -32,7 +32,7 @@ connectDB();
 
 // Security Middleware
 app.use(helmet({ crossOriginResourcePolicy: { policy: "cross-origin" } }));
-app.use(mongoSanitize()); // Prevent NoSQL injection
+//app.use(mongoSanitize()); // Prevent NoSQL injection
 
 // Rate limiting
 const limiter = rateLimit({
