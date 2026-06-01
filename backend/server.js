@@ -71,7 +71,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 // File upload - only for specific routes, not globally
 // app.use(fileUpload({
   // useTempFiles: true,
-  tempFileDir: "/tmp/"
+  // tempFileDir: "/tmp/"
   // tempFileDir: "./tmp/",
   // limits: { fileSize: 500 * 1024 * 1024 }, // 500MB for videos
   // abortOnLimit: true,
@@ -81,7 +81,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 app.use(fileUpload({
   useTempFiles: true,
-  tempFileDir: "./tmp/",
+  tempFileDir: "/tmp/",
   createParentPath: true,
   abortOnLimit: true,
   limits: {
@@ -146,9 +146,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 LearnKro server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
-});
+// const PORT = process.env.PORT || 5000;
+// app.listen(PORT, () => {
+  // console.log(`🚀 LearnKro server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
+// });
 
 export default app;
